@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 
 $namespace=$1
 $replicase=$2||0
@@ -12,5 +12,3 @@ if [ $replicas -gt 0]; then
 else
     helm install elasticsearch elastic/elasticsearch -n $namespace
 fi
-
-helm install kibana elastic/kibana -n $namespace
